@@ -26,7 +26,7 @@ Include link to your google sheet here.  Here is the sample [Suresh had used in 
 
 ## Time/Priority Matrix
 
-- [Time Matrix](Null)
+- [Time Matrix](https://res.cloudinary.com/jcloud3zf/image/upload/v1596222842/project2-api/matrix_vgwmkj.png)
 
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
