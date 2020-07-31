@@ -31,9 +31,9 @@ Include link to your google sheet here.  Here is the sample [Suresh had used in 
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Hamburger | H | 1hr | 1.5hr | -hr|
-| Project Previews | H | 3hr | -hr | -hr|
-| Regular Nav | H | H | -hr | -hr|
+| Hamburger | H | 1hr | -hr | -hr|
+| Controller functions | H | 1hr | -hr | -hr|
+| Regular Nav | H | 1.5hr| -hr | -hr|
 | Adding Form | H | 1.5hr| -hr | -hr |
 | Other sections and flex| M | 4hr | 2hr | -hr|
 | Working with API | H | 3hrs| 2hr | -hr |
