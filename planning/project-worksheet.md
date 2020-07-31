@@ -1,10 +1,11 @@
 # Project Overview
 
+
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
+|Day 1| Project Description | Complete
 |Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Incomplete
 |Day 2| Working RestAPI | Incomplete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
@@ -17,7 +18,8 @@ This is an API that will display events in NYC. A user will be able to query for
 
 ## Google Sheet
 
-Include link to your google sheet here.  Here is the sample [Suresh had used in class](https://docs.google.com/spreadsheets/d/1V1M3Eq1NXH2PNmeTlVviRhEjX9kenq769Vo2P5mMtro/edit#gid=0) 
+- [Google Sheet](https://docs.google.com/spreadsheets/d/1DRhpnHYU-LVnRYKSALXm_xbMCZ3FsTs6Zl-VJ1MU49E/edit#gid=0)
+
 
 ## Wireframes
 
@@ -31,11 +33,9 @@ Include link to your google sheet here.  Here is the sample [Suresh had used in 
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Hamburger | H | 1hr | -hr | -hr|
 | Controller functions | H | 1hr | -hr | -hr|
-| Regular Nav | H | 1.5hr| -hr | -hr|
-| Adding Form | H | 1.5hr| -hr | -hr |
-| Other sections and flex| M | 4hr | 2hr | -hr|
+| Getting query data from inputs | H | 1.5hr| -hr | -hr |
+| | M | 4hr | 2hr | -hr|
 | Working with API | H | 3hrs| 2hr | -hr |
 | Responsive | H | 3hr | -hr | -hr|
 | Social Media Icons | L | 1hr | -hr | -hr|
