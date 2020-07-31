@@ -22,7 +22,7 @@ Include link to your google sheet here.  Here is the sample [Suresh had used in 
 ## Wireframes
 
 - [Mobile](https://res.cloudinary.com/jcloud3zf/image/upload/v1596216790/project2-api/p2-mobile_ih9xem.png)
-
+- [Desktop](https://res.cloudinary.com/jcloud3zf/image/upload/v1596221033/project2-api/p2-desktop_vwoklx.png)
 
 ## Time/Priority Matrix
 
