@@ -26,6 +26,7 @@ const corsOptions = {
 
 NODE_ENV === "development" ? app.use(cors()) : app.use(cors(corsOptions));
 // Enables websites in whitelist to make API calls to your server, enables all sites in development
+app.use(cors())
 app.use(express.json()); //Turns JSON from post/put/patch requests and converts them into req.body object
 app.use(morgan("dev")); // Enables Morgan logging, creating more useful terminal logs while server runs
 
