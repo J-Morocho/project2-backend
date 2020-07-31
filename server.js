@@ -9,7 +9,7 @@ const testroute = require('./router/index')
 const PORT = process.env.PORT; 
 const NODE_ENV = process.env.NODE_ENV;
 
-const whitelist = ["http://localhost:3000/"];
+const whitelist = ["http://localhost:3000/", "https://project2-backend-hosted.herokuapp.com/" ];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {

@@ -2,10 +2,6 @@
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1| Project Description | Incomplete
@@ -17,7 +13,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This is an API that will display events in NYC. A user will be able to query for events taking place in a specific borough. Once the user finds an event they can choose to add it to their event list.  A user model as well as an events model will be needed. Within the user model we will have The backend portion of this application will be focused on CRUD operations for events, as well as adding a selected events to a user's profile. 
 
 ## Google Sheet
 
