@@ -35,29 +35,42 @@ This is an API that will display events in NYC. A user will be able to query for
 
 ## Time/Priority Matrix
 
-- [Time Matrix](https://res.cloudinary.com/jcloud3zf/image/upload/v1596222842/project2-api/matrix_vgwmkj.png)
+- [Time Matrix Backend](https://res.cloudinary.com/jcloud3zf/image/upload/v1596222842/project2-api/matrix_vgwmkj.png)
+
+#### Pre-MVP Setup
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Project structure setup| H| 2hr| 1hr| 1hr|
+| Brainstorm API idea |H| 1hr| 1.5hr| 1.5hr|
+| API Research| H| 1hr| 0.6hr| 0.6hr|
+| Wireframe| H| 4hr| 3hr| 3hr|
+| Priority Matrix| H| 1hr| 2hr| 2hr|
+| Deployment| H| 2hr| 2hr| 2hr|
+| Total | H | 11hrs| 10.1hrs | 10.1hrs |
+
 
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Controller functions | H | 1hr | -hr | -hr|
-| Getting query data from inputs | H | 1.5hr| -hr | -hr |
-| | M | 4hr | 2hr | -hr|
-| Working with API | H | 3hrs| 2hr | -hr |
-| Responsive | H | 3hr | -hr | -hr|
-| Social Media Icons | L | 1hr | -hr | -hr|
-| Total | H | 15.5hrs| -hrs | -hrs |
+| Controller functions | H | 2hr | -hr | -hr|
+| Getting query data from inputs | M | 1.5hr| -hr | -hr |
+| Create model schema| M | 4hr | 0.4hr | -hr|
+| Working with API | H | 3hrs| -hr | -hr |
+| Establish routers | H | 3hr | -hr | -hr|
+| Get event data by borough| H | 1hr| -hr| -hr|
+| Get event data by event type | H | 1hr | -hr| -hr|
+| Add event to user events list | H | 3 hr| -hr | -hr|
+| delete event from user events list | H | 3hr| -hr| -hr|
+| Create user | H | 2hr| -hr| -hr|
+| Total | H | 23.5hrs| -hrs | -hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Project Hover | L | 3hr | -hr | -hr|
-| Banner letters wiggle | L | 1hr | -hr | -hr|
-| Interactive Banner | M | 4hr | -hr | -hr|
-| Materialize | H | 4hr | -hr | -hr|
-| Bootstrap | H | 4hr | -hr | -hr|
-| Make own icon | L | 4hr | -hr | -hr|
-| Total | H | 20hrs| -hrs | -hrs |
+| Page redirect | L | 3hr | -hr | -hr|
+| Grab data from API endpoint | L | 5hr | -hr | -hr|
+| Remove event once event date expires | M | 4hr| -hr| -hr|
+| Total | H | 12hrs| -hrs | -hrs |
 
 ## Additional Libraries
 ## Code Snippet
@@ -74,7 +87,3 @@ function reverse(string) {
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object
-
-## Previous Project Worksheet
- - [Readme's](https://github.com/jkeohan/fewd-class-repo/tree/master/final-project-worksheet/project-worksheet-examples)
- - [Best of class readme](https://github.com/jkeohan/fewd-class-repo/blob/master/final-project-worksheet/project-worksheet-examples/portfolio-gracie.md)
