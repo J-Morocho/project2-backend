@@ -19,4 +19,13 @@ const getUserByName = async(req, res) => {
         
     }
 }
-module.exports = {getAllUsers, getUserByName}
+
+const createUser = async(req, res) => {
+    try {
+        const newUser = await User.create(req.body)
+        res.status(200).json(newUser)
+    } catch (error) {
+        res.status(400).send(error)
+    }
+}
+module.exports = {getAllUsers, getUserByName, createUser}
