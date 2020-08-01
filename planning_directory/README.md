@@ -16,6 +16,13 @@
 
 This is an API that will display events in NYC. A user will be able to query for events taking place in a specific borough. Once the user finds an event they can choose to add it to their event list.  A user model as well as an events model will be needed. Within the user model we will have The backend portion of this application will be focused on CRUD operations for events, as well as adding a selected events to a user's profile. 
 
+## User story
+
+- User is able to query for events in the database based on the Borough and/or event type
+- User can choose to add an event to an event list
+- The user can look at the event list for any particular person that is registered in the database
+- The user can remove an event from the event list
+
 ## Google Sheet
 
 - [Google Sheet](https://docs.google.com/spreadsheets/d/1DRhpnHYU-LVnRYKSALXm_xbMCZ3FsTs6Zl-VJ1MU49E/edit#gid=0)
