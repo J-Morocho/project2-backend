@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/3000', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/p2_ryze_db', { useNewUrlParser: true , useUnifiedTopology: true} )
 
 mongoose.Promise = Promise
 
