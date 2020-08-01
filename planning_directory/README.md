@@ -87,3 +87,24 @@ function reverse(string) {
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object
+
+**ERROR**: Data would not display when /eventTypes was called
+**Resolution** Parameter capturing routes need to be placed or named appropriately
+When /eventTypes is passed through it will be viewed assinged to the borough variable once we reach that route 
+```js
+router.get('/:borough', getEventsByBorough)
+
+router.get('/getEventTypes', getEventTypes)
+// get event by Id
+router.get('/id/:id', getEventById)
+```
+To resolve this issue you can add an extra path to the router so that /eventTypes passes through without being captured
+```js
+router.get('/borough/:borough', getEventsByBorough)
+
+router.get('/getEventTypes', getEventTypes)
+// get event by Id
+router.get('/id/:id', getEventById)
+```
+
+

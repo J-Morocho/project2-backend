@@ -20,10 +20,9 @@ const getEventsByBorough = async(req, res) => {
     }
 }
 
-// Not working...
 const getEventTypes = async(req, res) => {
     try {
-        const eventTypes = await Event.find({})
+        const eventTypes = await Event.find({},{"event_type":1})
         res.status(200).json(eventTypes)
     } catch (error) {
         res.status(400).send(error)

@@ -9,4 +9,14 @@ const getAllUsers = async (req, res) => {
         res.status(400).send(error)
     }
 }
-module.exports = {getAllUsers}
+
+const getUserByName = async(req, res) => {
+    try {
+        const user = await User.find({"name":req.params.name})
+        res.status(200).json(user)
+    } catch (error) {
+        res.status(400).send(error)
+        
+    }
+}
+module.exports = {getAllUsers, getUserByName}
