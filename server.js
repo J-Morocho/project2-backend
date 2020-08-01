@@ -4,7 +4,9 @@ const app = express();
 const morgan = require("morgan");
 const cors = require("cors"); 
 const mongoose = require('mongoose')
-const testroute = require('./router/index')
+const eventsRoute = require('./router/event-router')
+const usersRoute = require('./router/user-router')
+
 
 const PORT = process.env.PORT; 
 const NODE_ENV = process.env.NODE_ENV;
@@ -30,7 +32,8 @@ app.use(cors())
 app.use(express.json()); //Turns JSON from post/put/patch requests and converts them into req.body object
 app.use(morgan("dev")); // Enables Morgan logging, creating more useful terminal logs while server runs
 
-app.use('/events', testroute)
+app.use('/events', eventsRoute)
+app.use('/users', usersRoute)
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

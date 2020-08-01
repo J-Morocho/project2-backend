@@ -20,6 +20,7 @@ const getEventsByBorough = async(req, res) => {
     }
 }
 
+// Not working...
 const getEventTypes = async(req, res) => {
     try {
         const eventTypes = await Event.find({})
@@ -38,6 +39,7 @@ const getEventById = async(req, res) => {
         res.status(400).send(error)
     }
 }
+
 
 
 module.exports = {

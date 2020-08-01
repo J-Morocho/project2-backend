@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {getAllEvents, getEventsByBorough, getEventTypes, getEventById} = require('../controllers/data-controllers')
+const {getAllEvents, getEventsByBorough, getEventTypes, getEventById} = require('../controllers/event-controllers')
 
 // backend connection test
 router.get('/', (req,res) => {
