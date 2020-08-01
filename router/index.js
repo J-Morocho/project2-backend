@@ -1,13 +1,14 @@
 const router = require('express').Router()
-const {} = require('../controllers/data-controllers')
+const {getAllEvents} = require('../controllers/data-controllers')
 
 
-// get all data
+// backend connection test
 router.get('/', (req,res) => {
     res.send('Backend has been reached!')
 })
-// get single datum
-router.get('/', )
+
+// get all events in database
+router.get('/getAll', getAllEvents)
 // create data
 router.post('/', )
 // update datum

@@ -30,7 +30,7 @@ app.use(cors())
 app.use(express.json()); //Turns JSON from post/put/patch requests and converts them into req.body object
 app.use(morgan("dev")); // Enables Morgan logging, creating more useful terminal logs while server runs
 
-app.use('/', testroute)
+app.use('/events', testroute)
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
