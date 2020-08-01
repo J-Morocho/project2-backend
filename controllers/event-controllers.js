@@ -20,6 +20,7 @@ const getEventsByBorough = async(req, res) => {
     }
 }
 
+
 const getEventTypes = async(req, res) => {
     try {
         const eventTypes = await Event.find({},{"event_type":1})

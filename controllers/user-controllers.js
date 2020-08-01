@@ -1,5 +1,7 @@
 require('../db/connection')
+const {Schema} = require('mongoose')
 const User = require('../models/user')
+const Event = require('../models/event')
 
 const getAllUsers = async (req, res) => {
     try {
@@ -28,4 +30,22 @@ const createUser = async(req, res) => {
         res.status(400).send(error)
     }
 }
-module.exports = {getAllUsers, getUserByName, createUser}
+
+// Event objectId "5f2571244dc9b91dddd21d06"
+// Takes in an objectId for an event in the database and adds it to a specified user
+const addEventToUserList = async(req, res) => {
+    try {
+        // using find() returns an array with objects
+        // findOne is a perfect fit for this function
+        const user = await User.findOne({name:req.params.name})
+        const events = user.eventsAttending
+        console.log(events)
+        res.status(200).json(user)
+    } catch (error) {
+        res.status(400).send(error)
+    }
+}
+
+
+
+module.exports = {getAllUsers, getUserByName, createUser, addEventToUserList}
