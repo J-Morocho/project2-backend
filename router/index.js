@@ -1,6 +1,5 @@
 const router = require('express').Router()
-const {getAllEvents} = require('../controllers/data-controllers')
-
+const {getAllEvents, getEventsByBorough} = require('../controllers/data-controllers')
 
 // backend connection test
 router.get('/', (req,res) => {
@@ -9,8 +8,8 @@ router.get('/', (req,res) => {
 
 // get all events in database
 router.get('/getAll', getAllEvents)
-// create data
-router.post('/', )
+// get event by borough
+router.get('/:borough', getEventsByBorough)
 // update datum
 router.put('/', )
 // remove datum
