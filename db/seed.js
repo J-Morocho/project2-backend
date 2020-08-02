@@ -1,4 +1,4 @@
-const {mongoose} = require('./connection')
+
 const Event = require('../models/event')
 const User = require("../models/user")
 const data = require('./seeddata.json')
@@ -23,6 +23,5 @@ const insertFew = async(req, res) => {
     }
 }
 
-
-//insertMany(data)
+insertMany(data)
 insertFew(udata)
