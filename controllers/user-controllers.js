@@ -31,15 +31,26 @@ const createUser = async(req, res) => {
     }
 }
 
+// gets user events
+const getUserEventList = async (req, res) => {
+    try {
+        const user = await User.findOne({name: req.params.name}, {eventsAttending:1})
+        res.status(200).json(user)
+    } catch (error) {
+       res.status(400).send(error) 
+    }
+}
+
 // Event objectId "5f2571244dc9b91dddd21d06"
 // Takes in an objectId for an event in the database and adds it to a specified user
 const addEventToUserList = async(req, res) => {
     try {
         // using find() returns an array with objects
         // findOne is a perfect fit for this function
-        const user = await User.findOne({name:req.params.name})
-        const events = user.eventsAttending
-        console.log(events)
+        const user = await User.updateOne(
+            {name:req.params.name},
+            {$addToSet: {eventsAttending: req.params.eventObjectId}})
+        console.log(user)
         res.status(200).json(user)
     } catch (error) {
         res.status(400).send(error)
@@ -48,4 +59,4 @@ const addEventToUserList = async(req, res) => {
 
 
 
-module.exports = {getAllUsers, getUserByName, createUser, addEventToUserList}
+module.exports = {getAllUsers, getUserByName, createUser, getUserEventList, addEventToUserList}
