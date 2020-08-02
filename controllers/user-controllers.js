@@ -50,13 +50,26 @@ const addEventToUserList = async(req, res) => {
         const user = await User.updateOne(
             {name:req.params.name},
             {$addToSet: {eventsAttending: req.params.eventObjectId}})
-        console.log(user)
+
         res.status(200).json(user)
     } catch (error) {
         res.status(400).send(error)
     }
 }
 
+const removeEventFromUserList = async (req, res) => {
+    try {
+        const removedEvent = await User.deleteOne(
+            {eventsAttending}
+        )
+    } catch (error) {
+        res.status(400).send(error)
+        
+    }
+}
 
 
-module.exports = {getAllUsers, getUserByName, createUser, getUserEventList, addEventToUserList}
+module.exports = {
+    getAllUsers, getUserByName, 
+    createUser, getUserEventList, 
+    addEventToUserList, removeEventFromUserList}
