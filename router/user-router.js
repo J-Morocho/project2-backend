@@ -8,7 +8,7 @@ router.get('/getAll', getAllUsers)
 router.get('/name/:name', getUserByName)
 
 // get user event list
-router.get('/:name/eventsAttending', getUserEventList)
+router.get('/user/:name/eventsAttending', getUserEventList)
 
 // create user
 router.post('/create', createUser)
