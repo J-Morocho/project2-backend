@@ -11,7 +11,7 @@ const usersRoute = require('./router/user-router')
 const PORT = process.env.PORT; 
 const NODE_ENV = process.env.NODE_ENV;
 
-const whitelist = ["https://project2-backend-hosted.herokuapp.com/", "https://localhost:3000/", "mongodb://localhost/3000"];
+const whitelist = ["https://project2-backend-hosted.herokuapp.com/", "https://localhost:3000/",];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {

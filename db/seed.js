@@ -1,9 +1,17 @@
 
+require('dotenv').config()
+const mongoose = require('mongoose')
+const {mongoURI} = process.env
 const Event = require('../models/event')
 const User = require("../models/user")
 const data = require('./seeddata.json')
 const udata = require('./userlist.json')
-const express = require('express')
+
+const db = mongoose.connection 
+const mongoConfig = {useNewUrlParser:true, useUnifiedTopology: true}
+mongoose.connect(mongoURI, mongoConfig, () => {
+    console.log("please connect to mongo")
+})
 
 const insertMany = async(req, res) => {
     try {
