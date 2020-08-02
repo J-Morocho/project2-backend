@@ -24,6 +24,9 @@ const corsOptions = {
   },
 };
 
+
+
+
 // MIDDLEWARE
 
 NODE_ENV === "development" ? app.use(cors()) : app.use(cors(corsOptions));
