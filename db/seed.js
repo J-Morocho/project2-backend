@@ -31,5 +31,5 @@ const insertFew = async(req, res) => {
     }
 }
 
-insertMany(data)
-insertFew(udata)
+//insertMany(data)
+//insertFew(udata)

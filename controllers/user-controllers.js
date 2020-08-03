@@ -76,7 +76,7 @@ const addEventToUserList = async(req, res) => {
         // findOne is a perfect fit for this function
         const user = await User.updateOne(
             {name:req.params.name},
-            {$addToSet: {eventsAttending: ObjectId(req.params.eventObjectId)}}).populate(Event)
+            {$addToSet: {eventsAttending: req.params.eventObjectId}})
 
         res.status(200).json(user)
     } catch (error) {
