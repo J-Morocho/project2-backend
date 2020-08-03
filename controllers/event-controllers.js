@@ -40,12 +40,21 @@ const getEventById = async(req, res) => {
     }
 }
 
+const getDistinctEventLocations = async(req, res) => {
+    try {
+        const locations = await Event.distinct("event_type")
+        res.status(200).json(locations)
+    } catch (error) {
+        res.status(400).send(error)
+    }
+}
 
 
 module.exports = {
     getAllEvents, 
     getEventsByBorough,
     getEventTypes,
-    getEventById
+    getEventById,
+    getDistinctEventLocations
 }
 
