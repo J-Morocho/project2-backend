@@ -6,7 +6,7 @@
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1| Project Description | Complete
-|Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Incomplete
+|Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Complete
 |Day 2| Working RestAPI | Incomplete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| MVP & Bug Fixes | Incomplete
@@ -38,7 +38,7 @@ This is an API that will display events in NYC. A user will be able to query for
 - [Time Matrix Backend](https://res.cloudinary.com/jcloud3zf/image/upload/v1596222842/project2-api/matrix_vgwmkj.png)
 
 #### Pre-MVP Setup
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Project structure setup| H| 2hr| 1hr| 1hr|
 | Brainstorm API idea |H| 1hr| 1.5hr| 1.5hr|
@@ -50,22 +50,22 @@ This is an API that will display events in NYC. A user will be able to query for
 
 
 #### MVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Controller functions | H | 2hr | -hr | -hr|
-| Getting query data from inputs | M | 1.5hr| -hr | -hr |
-| Create model schema| M | 4hr | 0.4hr | -hr|
-| Working with API | H | 3hrs| -hr | -hr |
-| Establish routers | H | 3hr | -hr | -hr|
-| Get event data by borough| H | 1hr| -hr| -hr|
-| Get event data by event type | H | 1hr | -hr| -hr|
-| Add event to user events list | H | 3 hr| -hr | -hr|
-| delete event from user events list | H | 3hr| -hr| -hr|
-| Create user | H | 2hr| -hr| -hr|
-| Total | H | 23.5hrs| -hrs | -hrs |
+| Controller functions | H | 2hr | 5hr | 5hr|
+| Getting query data from inputs | M | 1.5hr| 1.5hr | 1.5hr |
+| Create model schema| M | 4hr | 0.4hr | 0.4hr|
+| Working with API | H | 3hrs| 4hr | 4hr |
+| Establish routers | H | 3hr | 5hr | 5hr|
+| Get event data by borough| H | 1hr| .5hr| .5hr|
+| Get event data by event type | H | 1hr | .5hr| .5hr|
+| Add event to user events list | H | 3 hr| 1.5hr | 1.5hr|
+| delete event from user events list | H | 3hr| 1hr| 1hr|
+| Create user | H | 2hr| .5hr| .5hr|
+| Total | H | 23.5hrs| 19.9hrs | 19.9hrs |
 
 #### PostMVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Page redirect | L | 3hr | -hr | -hr|
 | Grab data from API endpoint | L | 5hr | -hr | -hr|
@@ -75,21 +75,18 @@ This is an API that will display events in NYC. A user will be able to query for
 ## Additional Libraries
 ## Code Snippet
 
+```js
+const allEventsAttending = await Promise.all( events.map( async (e) => {
+            return await Event.findById(e) 
+        }))
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+This piece of code helped me get more comfortable with async functionality and the whole idea of Promises
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
 
 **ERROR**: Data would not display when /eventTypes was called
-**Resolution** Parameter capturing routes need to be placed or named appropriately
+**RESOLUTION** Parameter capturing routes need to be placed or named appropriately
 When /eventTypes is passed through it will be viewed assinged to the borough variable once we reach that route 
 ```js
 router.get('/:borough', getEventsByBorough)
@@ -106,5 +103,8 @@ router.get('/getEventTypes', getEventTypes)
 // get event by Id
 router.get('/id/:id', getEventById)
 ```
+
+**ERROR**: get /eventsAttending route returns empty array of objects
+**RESOLUTION** aync function was implemented to ensure that Event.findById() finishes running before continuing to the next block of code
 
 
