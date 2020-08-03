@@ -58,10 +58,26 @@ const createUser = async(req, res) => {
 // gets user events
 const getUserEventList = async (req, res) => {
     try {
-        const user = await User.findOne({"name": req.params.name})
-        const arr = await user.eventsAttending
+        const user = await User.findOne({name: req.params.name})
+        const events = user.eventsAttending // array of events the user is attending
+        // Wrapping map function was found at https://advancedweb.hu/how-to-use-async-functions-with-array-map-in-javascript/#:~:text=The%20map%20function,-The%20map%20is&text=An%20async%20version%20needs%20to,the%20results%20in%20an%20Array.
+        const o = await Promise.all( events.map( async (e) => {
+            return await Event.findById(e) //ev is our promise?
+        }))
 
-        res.status(200).send(arr)
+        const personWithEvents = {
+            name: user.name,
+            eventsAttending: o
+        }
+        //const e = await Event.findById("5f2571244dc9b91dddd21d05") // works as expected
+        //const e = await Event.findById(events[0])
+        // const eventInfo = events.map(async(eventId) => {
+        //     const e = await Event.findById(eventId)
+        //     return e._id
+        // })
+
+        // const e2 = Promise.all(eventInfo)
+        await res.status(200).send(personWithEvents)
     } catch (error) {
        res.status(400).send(error) 
     }
