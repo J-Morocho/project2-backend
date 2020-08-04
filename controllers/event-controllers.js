@@ -49,12 +49,20 @@ const getDistinctField = async(req, res) => {
     }
 }
 
-
+const getEventByBoroughAndLocation = async(req,res) => {
+    try {
+        const queriedEvents = await Event.find({event_borough: req.params.q1, event_type: req.params.q2})
+        await res.status(200).json(queriedEvents)
+    } catch (error) {
+        res.status(400).send(error)
+    }
+}
 module.exports = {
     getAllEvents, 
     getEventsByBorough,
     getEventTypes,
     getEventById,
-    getDistinctField
+    getDistinctField,
+    getEventByBoroughAndLocation
 }
 

@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const {getAllEvents, getEventsByBorough, 
     getEventTypes, getEventById,
-    getDistinctField} = require('../controllers/event-controllers')
+    getDistinctField, getEventByBoroughAndLocation} = require('../controllers/event-controllers')
 
 // backend connection test
 router.get('/', (req,res) => {
@@ -20,6 +20,10 @@ router.get('/getEventTypes', getEventTypes)
 // get event by Id
 router.get('/id/:id', getEventById)
 
+// get the distinct values from an event's field 
 router.get('/distinct/:field', getDistinctField)
+
+router.get('/query/:q1/:q2', getEventByBoroughAndLocation)
+
 
 module.exports = router
