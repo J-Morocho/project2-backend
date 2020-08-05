@@ -72,9 +72,10 @@ const addEventToUserList = async(req, res) => {
 
 const removeEventFromUserList = async (req, res) => {
     try {
-        const removedEvent = await User.deleteOne({eventsAttending}
-        )
-        res.status(400).json()
+        const removedEvent = await User.updateOne(
+            {name: req.params.name},
+            {$pull: {eventsAttending: req.params.eventObjectId}})
+        res.status(200).json(removedEvent)
     } catch (error) {
         res.status(400).send(error)
         
