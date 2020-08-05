@@ -32,6 +32,16 @@ const createUser = async(req, res) => {
     }
 }
 
+
+const deleteUser = async (req, res) => {
+    try {
+        const removedUser = await User.deleteOne({name:req.params.name})
+        res.status(200).json(removedUser)
+    } catch (error) {
+        res.status(400).send(error)
+    }
+}
+
 // gets user events
 const getUserEventList = async (req, res) => {
     try {
@@ -42,6 +52,7 @@ const getUserEventList = async (req, res) => {
     }
 
 }
+
 
 // Event objectId "5f2571244dc9b91dddd21d06"
 // Takes in an objectId for an event in the database and adds it to a specified user
@@ -75,4 +86,5 @@ module.exports = {
     getAllUsers, getUserByName, 
     createUser, getUserEventList, 
     addEventToUserList, removeEventFromUserList,
+    deleteUser
     }

@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const {getAllUsers, getUserByName, 
     createUser, getUserEventList, addEventToUserList, 
-    removeEventFromUserList} = require('../controllers/user-controllers')
+    removeEventFromUserList, deleteUser} = require('../controllers/user-controllers')
 
 // get all users
 router.get('/getAll', getAllUsers)
@@ -21,5 +21,7 @@ router.put('/user/:name/addEvent/:eventObjectId', addEventToUserList)
 // remove event from user's eventsAttending array
 router.delete('/user/:name/removeEvent/:eventObjectId', removeEventFromUserList)
 
+// Remove user from database
+router.delete('/removeUser/:name', deleteUser)
 
 module.exports = router
