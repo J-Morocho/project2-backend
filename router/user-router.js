@@ -1,5 +1,7 @@
 const router = require('express').Router()
-const {getAllUsers, getUserByName, createUser, getUserEventList, addEventToUserList, removeEventFromUserList} = require('../controllers/user-controllers')
+const {getAllUsers, getUserByName, 
+    createUser, getUserEventList, addEventToUserList, 
+    removeEventFromUserList} = require('../controllers/user-controllers')
 
 // get all users
 router.get('/getAll', getAllUsers)

@@ -74,4 +74,5 @@ const removeEventFromUserList = async (req, res) => {
 module.exports = {
     getAllUsers, getUserByName, 
     createUser, getUserEventList, 
-    addEventToUserList, removeEventFromUserList}
+    addEventToUserList, removeEventFromUserList,
+    }
