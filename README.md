@@ -1,5 +1,16 @@
 # Project Overview
 
+## Placeholder: The non aptly named event finding API
+
+Display events going on around your area!
+![Home Page](https://res.cloudinary.com/jcloud3zf/image/upload/v1596744866/project2-api/p2-api-homepage_ltthgk.png)
+
+Track events that people in your area are attending!
+![Track Users](https://res.cloudinary.com/jcloud3zf/image/upload/v1596744874/project2-api/p2-api-userfavorites_fj53ud.png)
+
+### Frontend code
+- [Live Webpage!] (https://placeholderapp.netlify.app/)
+- [Not a fan of backend? Look at the frontend!] (https://github.com/J-Morocho/project2-frontend)
 
 ## Project Schedule
 
@@ -73,6 +84,10 @@ This is an API that will display events in NYC. A user will be able to query for
 | Total | H | 12hrs| -hrs | -hrs |
 
 ## Additional Libraries
+
+jQuery : Interaction with DOM elements
+Bootstrap : Responsive css styling on html tags
+
 ## Code Snippet
 
 ```js
