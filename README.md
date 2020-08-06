@@ -2,10 +2,12 @@
 
 ## Placeholder: The non aptly named event finding API
 
-Display events going on around your area!
+**Display events going on around your area!**  
+
 ![Home Page](https://res.cloudinary.com/jcloud3zf/image/upload/v1596744866/project2-api/p2-api-homepage_ltthgk.png)
 
-Track events that people in your area are attending!
+**Track events that people in your area are attending!**  
+
 ![Track Users](https://res.cloudinary.com/jcloud3zf/image/upload/v1596744874/project2-api/p2-api-userfavorites_fj53ud.png)
 
 ### Frontend code
