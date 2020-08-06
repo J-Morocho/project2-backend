@@ -35,7 +35,7 @@ const createUser = async(req, res) => {
 
 const deleteUser = async (req, res) => {
     try {
-        const removedUser = await User.deleteOne({name:req.params.name})
+        const removedUser = await User.findOneAndDelete({name:req.params.name})
         res.status(200).json(removedUser)
     } catch (error) {
         res.status(400).send(error)
